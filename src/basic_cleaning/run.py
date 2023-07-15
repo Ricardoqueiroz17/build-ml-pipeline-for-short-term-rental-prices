@@ -11,7 +11,6 @@ import pandas as pd
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger()
 
-
 def go(args):
 
     run = wandb.init(job_type="basic_cleaning")
@@ -21,9 +20,6 @@ def go(args):
     # particular version of the artifact
     # artifact_local_path = run.use_artifact(args.input_artifact).file()
 
-    ######################
-    # YOUR CODE HERE     #
-    ######################
 
     logger.info("Downloading artifact")
     artifact = run.use_artifact(args.input_artifact)
